@@ -1,0 +1,3 @@
+{"IdAlmuno":0,"nombre":"Joan","apellido":"Font","dni":"012345678A"}
+{"IdAlmuno":0,"nombre":"Manu","apellido":"Hernan","dni":"01234567A"}
+{"IdAlmuno":0,"nombre":"Joy","apellido":"Caprano","dni":"01234567B"}
