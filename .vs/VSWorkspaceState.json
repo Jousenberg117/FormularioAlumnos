@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\FormularioServer.Common.Model"
   ],
-  "SelectedNode": "\\FormularioServer.Presentation.Winsite",
+  "SelectedNode": "\\FormularioServer.Common.Model\\FileServer.Common.Model.sln",
   "PreviewInSolutionExplorer": false
 }
