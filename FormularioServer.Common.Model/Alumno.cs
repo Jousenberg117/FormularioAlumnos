@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FileServer.Common.Model
+namespace FormularioServer.Common.Model
 {
     public class Alumno
     {

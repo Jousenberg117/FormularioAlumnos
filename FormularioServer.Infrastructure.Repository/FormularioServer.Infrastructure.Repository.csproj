@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FE62C810-F221-4A45-BBAD-3052F1D1424B}</ProjectGuid>
+    <ProjectGuid>{F001A5DD-57FC-4B5E-A3BC-BE1315384263}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FileServer.Infrastructure.Repository</RootNamespace>
@@ -74,9 +74,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FileServer.Common.Model\FileServer.Common.Model.csproj">
-      <Project>{1a637b6d-998f-4b85-81d5-4a35f873afba}</Project>
-      <Name>FileServer.Common.Model</Name>
+    <ProjectReference Include="..\FormularioServer.Common.Model\FormularioServer.Common.Model.csproj">
+      <Project>{16f9784f-f9ca-4280-a60e-a022c4ce7a69}</Project>
+      <Name>FormularioServer.Common.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

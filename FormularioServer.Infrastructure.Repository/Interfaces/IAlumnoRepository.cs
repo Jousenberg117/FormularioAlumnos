@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FileServer.Common.Model;
+using FormularioServer.Common.Model;
 
-namespace FileServer.Infrastructure.Repository.Interfaces
+namespace FormularioServer.Infrastructure.Repository.Interfaces
 {
     public interface IAlumnoRepository
     {

@@ -107,13 +107,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FileServer.Common.Model\FileServer.Common.Model.csproj">
-      <Project>{1a637b6d-998f-4b85-81d5-4a35f873afba}</Project>
-      <Name>FileServer.Common.Model</Name>
+    <ProjectReference Include="..\FormularioServer.Common.Model\FormularioServer.Common.Model.csproj">
+      <Project>{16f9784f-f9ca-4280-a60e-a022c4ce7a69}</Project>
+      <Name>FormularioServer.Common.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FileServer.Infrastructure.Repository\FileServer.Infrastructure.Repository.csproj">
-      <Project>{fe62c810-f221-4a45-bbad-3052f1d1424b}</Project>
-      <Name>FileServer.Infrastructure.Repository</Name>
+    <ProjectReference Include="..\FormularioServer.Infrastructure.Repository\FormularioServer.Infrastructure.Repository.csproj">
+      <Project>{f001a5dd-57fc-4b5e-a3bc-be1315384263}</Project>
+      <Name>FormularioServer.Infrastructure.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

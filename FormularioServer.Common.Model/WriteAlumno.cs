@@ -3,11 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;          // JSONs
+using System.IO;                // Files
 
-namespace FileServer.Common.Model
+namespace FormularioServer.Common.Model
 {
-    class WriteAlumno
-    {/*
+    public class WriteAlumno
+    {
+        Alumno miAlumno = new Alumno();
+
+        // Funcion para generar el JSON
+        public string ParseJSON(string nombre, string apellidos, string dni)
+        {
+            miAlumno.nombre = nombre;
+            miAlumno.apellido = apellidos;
+            miAlumno.dni = dni;
+
+            string jsonAlumno = JsonConvert.SerializeObject(miAlumno);
+
+            // Path del fichero
+            string path = @"C:/Users/jhoubbertM/source/repos/FormularioAlumnos/alumnos.txt";
+
+            // Sobreescribir 
+            using (StreamWriter fichero = new StreamWriter(path, true))
+            {
+                //fichero.WriteLine(jsonAlumno);
+                fichero.WriteLine(jsonAlumno);
+                fichero.Close();
+                return jsonAlumno;
+            }
+        }
+
+        /*
             // Evento clic del boton registrar, al clicar se rellena el objeto Alumno, y es almacenado en un JSON.
             private void Boton_registrar(object sender, EventArgs e)
             {

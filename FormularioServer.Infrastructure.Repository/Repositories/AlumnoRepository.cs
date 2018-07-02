@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FileServer.Common.Model;
-using FileServer.Infrastructure.Repository.Interfaces;
+using FormularioServer.Common.Model;
+using FormularioServer.Infrastructure.Repository.Interfaces;
 
-namespace FileServer.Infrastructure.Repository.Repositories
+namespace FormularioServer.Infrastructure.Repository.Repositories
 {
     public class AlumnoRepository : IAlumnoRepository
     {
