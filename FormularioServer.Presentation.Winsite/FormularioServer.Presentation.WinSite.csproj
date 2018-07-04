@@ -107,6 +107,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FormularioServer.Common.FileManager\FormularioServer.Common.Utils.csproj">
+      <Project>{fe3e6e63-19b8-487d-a93d-2a4e0b329785}</Project>
+      <Name>FormularioServer.Common.Utils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FormularioServer.Common.Model\FormularioServer.Common.Model.csproj">
       <Project>{16f9784f-f9ca-4280-a60e-a022c4ce7a69}</Project>
       <Name>FormularioServer.Common.Model</Name>

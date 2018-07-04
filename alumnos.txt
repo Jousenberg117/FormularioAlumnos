@@ -2,3 +2,5 @@
 {"IdAlmuno":0,"nombre":"Manu","apellido":"Hernan","dni":"01234567A"}
 {"IdAlmuno":0,"nombre":"Joy","apellido":"Caprano","dni":"01234567B"}
 {"IdAlmuno":0,"nombre":"Joanna","apellido":"Bollio","dni":"012345678C"}
+{"IdAlmuno":0,"nombre":"Gabriel","apellido":"Mendoza","dni":"23456789A"}
+{"IdAlmuno":0,"nombre":"Barbara","apellido":"Hermosilla","dni":"10203040C"}
