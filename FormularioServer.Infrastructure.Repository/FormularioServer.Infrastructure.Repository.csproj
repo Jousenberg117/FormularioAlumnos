@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IAlumnoRepository.cs" />
+    <Compile Include="Manager\FileManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AlumnoRepository.cs" />
   </ItemGroup>

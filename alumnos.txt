@@ -4,3 +4,5 @@
 {"IdAlmuno":0,"nombre":"Joanna","apellido":"Bollio","dni":"012345678C"}
 {"IdAlmuno":0,"nombre":"Gabriel","apellido":"Mendoza","dni":"23456789A"}
 {"IdAlmuno":0,"nombre":"Barbara","apellido":"Hermosilla","dni":"10203040C"}
+{"IdAlmuno":0,"nombre":"Josue","apellido":"Mora","dni":"021457861X"}
+{"IdAlmuno":0,"nombre":"Angelica","apellido":"Flores","dni":"56234589D"}

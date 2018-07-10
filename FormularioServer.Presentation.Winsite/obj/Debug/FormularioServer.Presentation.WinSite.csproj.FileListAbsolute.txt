@@ -229,9 +229,6 @@ C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation
 C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\Castle.Core.dll
 C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\FileServer.Common.Model.dll
 C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\FileServer.Infrastructure.Repository.dll
-C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
-C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
-C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\Moq.dll
 C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\Newtonsoft.Json.dll
 C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\System.Threading.Tasks.Extensions.dll
@@ -241,10 +238,6 @@ C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation
 C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\FileServer.Infrastructure.Repository.pdb
 C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\FileServer.Infrastructure.Repository.dll.config
 C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\Castle.Core.xml
-C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
-C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\Moq.pdb
-C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\Moq.xml
 C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\Newtonsoft.Json.xml
 C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\System.Threading.Tasks.Extensions.xml
