@@ -14,6 +14,7 @@ namespace FormularioServer.Infrastructure.Repository.Repositories
     public class AlumnoRepository : IAlumnoRepository
     {
         Alumno miAlumno = new Alumno();
+        
         public Alumno ParseJSON(string nombre, string apellidos, string dni)
         {
             miAlumno.nombre = nombre;
