@@ -251,3 +251,6 @@ C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation
 C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\obj\Debug\FormularioServer.Presentation.WinSite.csproj.CopyComplete
 C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\obj\Debug\FormularioAlumnos.exe
 C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\obj\Debug\FormularioAlumnos.pdb
+C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\log4net.config
+C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\log4net.dll
+C:\Users\jhoubbertM\source\repos\FormularioAlumnos\FormularioServer.Presentation.Winsite\bin\Debug\log4net.xml

@@ -7,3 +7,12 @@
 {"IdAlmuno":0,"nombre":"Josue","apellido":"Mora","dni":"021457861X"}
 {"IdAlmuno":0,"nombre":"Angelica","apellido":"Flores","dni":"56234589D"}
 {"IdAlmuno":0,"nombre":"Manuel","apellido":"Segnini","dni":"56684123S"}
+{"IdAlmuno":0,"nombre":null,"apellido":"Torres","dni":"35687423Z"}
+{"IdAlmuno":0,"nombre":"Marius","apellido":"Farnoti","dni":"875395123D"}
+jaoooas
+{"IdAlmuno":0,"nombre":"","apellido":"","dni":""}
+{"IdAlmuno":0,"nombre":"","apellido":"","dni":""}
+{"IdAlmuno":0,"nombre":"","apellido":"","dni":""}
+{"IdAlmuno":0,"nombre":"Anakin","apellido":"Skywalker","dni":"98764521G"}
+{"IdAlmuno":0,"nombre":"","apellido":"","dni":""}
+{"IdAlmuno":0,"nombre":"Fermin","apellido":"Trujillo","dni":"11234589Q"}

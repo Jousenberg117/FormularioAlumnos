@@ -26,7 +26,14 @@ namespace FormularioServer.Infrastructure.Repository.Repositories
         {
             string jsonAlumno = alumno.ToString();
             jsonAlumno = JsonConvert.SerializeObject(alumno);
+            try
+            { 
             FileManager.Sobreescribir(jsonAlumno);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
             return alumno;
         }
     }
