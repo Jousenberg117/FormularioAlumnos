@@ -22,8 +22,10 @@ namespace FormularioServer.Infrastructure.Repository.Repositories
             miAlumno.dni = dni;
             return miAlumno;
         }
+        
         public Alumno add(Alumno alumno)
         {
+            alumno.IdAlmuno = NuevoId();
             string jsonAlumno = alumno.ToString();
             jsonAlumno = JsonConvert.SerializeObject(alumno);
             try
@@ -35,6 +37,13 @@ namespace FormularioServer.Infrastructure.Repository.Repositories
                 throw ex;
             }
             return alumno;
+        }
+        protected int NuevoId()
+        {
+            string ultimoAlumno = FileManager.Leer();
+            var deserilized =  JsonConvert.DeserializeObject<Alumno>(ultimoAlumno);
+            int lastId = deserilized.IdAlmuno;
+            return ++lastId;
         }
     }
 }

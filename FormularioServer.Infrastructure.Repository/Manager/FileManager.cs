@@ -58,5 +58,30 @@ namespace FormularioServer.Infrastructure.Repository.Manager
                 fichero.Close();
             }
         }
+        public static string Leer()
+        {
+            string alumnoRead = string.Empty;
+            if (FileExist(path))
+            {
+                StreamReader fichero = new StreamReader(path);
+                try
+                {
+                    do
+                    {
+                        alumnoRead = fichero.ReadLine();
+                    }
+                    while (!fichero.EndOfStream); 
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    fichero.Close();
+                }
+            }
+            return alumnoRead;
+        }
     }
 }

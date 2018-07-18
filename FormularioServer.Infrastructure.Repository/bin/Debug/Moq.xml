@@ -236,18 +236,6 @@
             be part of an evaluated sub-tree.
             </summary>
         </member>
-        <member name="M:Moq.ExpressionExtensions.ToLambda(System.Linq.Expressions.Expression)">
-            <summary>
-            Casts the expression to a lambda expression, removing 
-            a cast if there's any.
-            </summary>
-        </member>
-        <member name="M:Moq.ExpressionExtensions.ToMethodCall(System.Linq.Expressions.LambdaExpression)">
-            <summary>
-            Casts the body of the lambda expression to a <see cref="T:System.Linq.Expressions.MethodCallExpression"/>.
-            </summary>
-            <exception cref="T:System.ArgumentException">If the body is not a method call.</exception>
-        </member>
         <member name="M:Moq.ExpressionExtensions.ToPropertyInfo(System.Linq.Expressions.LambdaExpression)">
             <summary>
             Converts the body of the lambda expression into the <see cref="T:System.Reflection.PropertyInfo"/> referenced by it.
@@ -351,6 +339,31 @@
             <param name="from">The minimum allowed value for the argument.</param>
             <param name="to">The maximum allowed value for the argument.</param>
             <param name="paramName">The name of the parameter.</param>
+        </member>
+        <member name="T:Moq.IInvocation">
+            <summary>
+            Provides information about an invocation of a mock object.
+            </summary>
+        </member>
+        <member name="P:Moq.IInvocation.Method">
+            <summary>
+            Gets the method of the invocation.
+            </summary>
+        </member>
+        <member name="P:Moq.IInvocation.Arguments">
+            <summary>
+            Gets the arguments of the invocation.
+            </summary>
+        </member>
+        <member name="T:Moq.IInvocationList">
+            <summary>
+            A list of invocations which have been performed on a mock.
+            </summary>
+        </member>
+        <member name="M:Moq.IInvocationList.Clear">
+            <summary>
+            Resets all invocations recorded for this mock.
+            </summary>
         </member>
         <member name="T:Moq.IMock`1">
             <summary>
@@ -565,6 +578,11 @@
         <member name="P:Moq.Mock.InheritedInterfaces">
             <summary>
             Gets the interfaces directly inherited from the mocked type (<see cref="P:Moq.Mock.TargetType"/>).
+            </summary>
+        </member>
+        <member name="P:Moq.Mock.Invocations">
+            <summary>
+            Gets list of invocations which have been performed on this mock.
             </summary>
         </member>
         <member name="M:Moq.Mock.OnGetObject">
@@ -3871,7 +3889,7 @@
             and fail with any other call.
             </summary>
         </member>
-        <member name="M:Moq.MethodCall.#ctor(Moq.Mock,Moq.Condition,System.Linq.Expressions.Expression,System.Reflection.MethodInfo,Moq.IMatcher[])">
+        <member name="M:Moq.MethodCall.#ctor(Moq.Mock,Moq.Condition,System.Linq.Expressions.LambdaExpression,System.Reflection.MethodInfo,Moq.IMatcher[])">
             <remarks>
               Only use this constructor when you know that the specified <paramref name="method"/> has no `out` parameters,
               and when you want to avoid the <see cref="T:Moq.MatcherFactory"/>-related overhead of the other constructor overload.
@@ -4590,6 +4608,46 @@
             </para>
             </remarks>
         </member>
+        <member name="M:Moq.MockException.MoreThanOneCall(Moq.MethodCall,System.Int32)">
+            <summary>
+              Returns the exception to be thrown when a setup limited by <see cref="M:Moq.Language.IOccurrence.AtMostOnce"/> is invoked more often than once.
+            </summary>
+        </member>
+        <member name="M:Moq.MockException.MoreThanNCalls(Moq.MethodCall,System.Int32,System.Int32)">
+            <summary>
+              Returns the exception to be thrown when a setup limited by <see cref="M:Moq.Language.IOccurrence.AtMost(System.Int32)"/> is invoked more often than the specified maximum number of times.
+            </summary>
+        </member>
+        <member name="M:Moq.MockException.NoMatchingCalls(Moq.MethodCall,System.Collections.Generic.IEnumerable{Moq.MethodCall},System.Collections.Generic.IEnumerable{Moq.Invocation},System.Linq.Expressions.LambdaExpression,Moq.Times,System.Int32)">
+            <summary>
+              Returns the exception to be thrown when <see cref="M:Moq.Mock.Verify(Moq.Mock[])"/> finds no invocations (or the wrong number of invocations) that match the specified expectation.
+            </summary>
+        </member>
+        <member name="M:Moq.MockException.NoSetup(Moq.Invocation)">
+            <summary>
+              Returns the exception to be thrown when a strict mock has no setup corresponding to the specified invocation.
+            </summary>
+        </member>
+        <member name="M:Moq.MockException.ReturnValueRequired(Moq.Invocation)">
+            <summary>
+              Returns the exception to be thrown when a strict mock has no setup that provides a return value for the specified invocation.
+            </summary>
+        </member>
+        <member name="M:Moq.MockException.UnmatchedSetups(Moq.Mock,System.Collections.Generic.IEnumerable{Moq.MethodCall})">
+            <summary>
+              Returns the exception to be thrown when <see cref="M:Moq.Mock.Verify(Moq.Mock[])"/> or <see cref="M:Moq.MockFactory.Verify"/> find a setup that has not been invoked.
+            </summary>
+        </member>
+        <member name="M:Moq.MockException.UnmatchedSetups(System.Collections.Generic.IEnumerable{Moq.MockException})">
+            <summary>
+              Returns the exception to be thrown when <see cref="M:Moq.MockFactory.Verify"/> finds several mocks with setups that have not been invoked.
+            </summary>
+        </member>
+        <member name="M:Moq.MockException.UnverifiedInvocations(System.Collections.Generic.IEnumerable{Moq.Invocation})">
+            <summary>
+              Returns the exception to be thrown when <see cref="M:Moq.Mock.VerifyNoOtherCalls(Moq.Mock)"/> finds invocations that have not been verified.
+            </summary>
+        </member>
         <member name="P:Moq.MockException.IsVerificationError">
             <summary>
             Indicates whether this exception is a verification fault raised by Verify()
@@ -4614,17 +4672,17 @@
             Provides additional methods on mocks.
             </summary>
         </member>
-        <member name="M:Moq.MockExtensions.ResetCalls(Moq.Mock)">
-            <summary>
-            Resets all invocations recorded for this mock.
-            </summary>
-            <param name="mock">The mock whose recorded invocations should be reset.</param>
-        </member>
         <member name="M:Moq.MockExtensions.Reset(Moq.Mock)">
             <summary>
             Resets this mock's state. This includes its setups, configured default return values, registered event handlers, and all recorded invocations.
             </summary>
             <param name="mock">The mock whose state should be reset.</param>
+        </member>
+        <member name="M:Moq.MockExtensions.ResetCalls(Moq.Mock)">
+            <summary>
+            Resets all invocations recorded for this mock.
+            </summary>
+            <param name="mock">The mock whose recorded invocations should be reset.</param>
         </member>
         <member name="T:Moq.MockSequence">
             <summary>
@@ -5478,16 +5536,6 @@
               Looks up a localized string similar to Property {0}.{1} does not have a getter..
             </summary>
         </member>
-        <member name="P:Moq.Properties.Resources.PropertyNotReadable">
-            <summary>
-              Looks up a localized string similar to Property {0}.{1} is write-only..
-            </summary>
-        </member>
-        <member name="P:Moq.Properties.Resources.PropertyNotWritable">
-            <summary>
-              Looks up a localized string similar to Property {0}.{1} is read-only..
-            </summary>
-        </member>
         <member name="P:Moq.Properties.Resources.PropertySetNotFound">
             <summary>
               Looks up a localized string similar to Property {0}.{1} does not have a setter..
@@ -5577,6 +5625,12 @@
               Looks up a localized string similar to Unhandled expression type: {0}.
             </summary>
         </member>
+        <member name="P:Moq.Properties.Resources.UnmatchedSetups">
+             <summary>
+               Looks up a localized string similar to The following setups on mock &apos;{0}&apos; were not matched:
+            {1}.
+             </summary>
+        </member>
         <member name="P:Moq.Properties.Resources.UnsupportedExpression">
             <summary>
               Looks up a localized string similar to Unsupported expression: {0}.
@@ -5597,12 +5651,6 @@
             <summary>
               Looks up a localized string similar to Use ItExpr.IsNull&lt;TValue&gt; rather than a null argument value, as it prevents proper method lookup..
             </summary>
-        </member>
-        <member name="P:Moq.Properties.Resources.VerificationFailed">
-             <summary>
-               Looks up a localized string similar to The following setups were not matched:
-            {0}.
-             </summary>
         </member>
         <member name="P:Moq.Properties.Resources.VerifyOnExtensionMethod">
             <summary>
@@ -6599,13 +6647,13 @@
             <summary>IsDirtyString: false</summary>
         </member>
         <member name="F:ThisAssembly.Git.Branch">
-            <summary>Branch: tags/v4.8.3</summary>
+            <summary>Branch: tags/v4.9.0</summary>
         </member>
         <member name="F:ThisAssembly.Git.Commit">
-            <summary>Commit: 5bf8ec0</summary>
+            <summary>Commit: 7da7c2a</summary>
         </member>
         <member name="F:ThisAssembly.Git.Sha">
-            <summary>Sha: 5bf8ec0858354e11898238f8ad94214f9c0c786f</summary>
+            <summary>Sha: 7da7c2ac50a4dfe3acafd5031c28c16515cff286</summary>
         </member>
         <member name="F:ThisAssembly.Git.Commits">
             <summary>Commits on top of base version: 0</summary>
@@ -6623,10 +6671,10 @@
             <summary>Major: 4</summary>
         </member>
         <member name="F:ThisAssembly.Git.BaseVersion.Minor">
-            <summary>Minor: 8</summary>
+            <summary>Minor: 9</summary>
         </member>
         <member name="F:ThisAssembly.Git.BaseVersion.Patch">
-            <summary>Patch: 3</summary>
+            <summary>Patch: 0</summary>
         </member>
         <member name="T:ThisAssembly.Git.SemVer">
             <summary>Provides access to SemVer information for the current assembly.</summary>
@@ -6635,10 +6683,10 @@
             <summary>Major: 4</summary>
         </member>
         <member name="F:ThisAssembly.Git.SemVer.Minor">
-            <summary>Minor: 8</summary>
+            <summary>Minor: 9</summary>
         </member>
         <member name="F:ThisAssembly.Git.SemVer.Patch">
-            <summary>Patch: 3</summary>
+            <summary>Patch: 0</summary>
         </member>
         <member name="F:ThisAssembly.Git.SemVer.Label">
             <summary>Label: </summary>

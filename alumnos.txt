@@ -16,3 +16,14 @@ jaoooas
 {"IdAlmuno":0,"nombre":"Anakin","apellido":"Skywalker","dni":"98764521G"}
 {"IdAlmuno":0,"nombre":"","apellido":"","dni":""}
 {"IdAlmuno":0,"nombre":"Fermin","apellido":"Trujillo","dni":"11234589Q"}
+{"IdAlmuno":0,"nombre":"Pepito","apellido":"Manzano","dni":"86131287S"}
+{"IdAlmuno":0,"nombre":"Barara","apellido":"Herrera","dni":"2563684C"}
+{"IdAlmuno":0,"nombre":"Sherlock","apellido":"Holmes","dni":"85274123M"}
+{"IdAlmuno":0,"nombre":"Odin","apellido":"DeAsgar","dni":"46321589L"}
+{"IdAlmuno":0,"nombre":"Carles","apellido":"Contreras","dni":"12345678U"}
+{"IdAlmuno":0,"nombre":"Andres","apellido":"Untiti","dni":"25647821G"}
+{"IdAlmuno":0,"nombre":"Maria","apellido":"Rosales","dni":"56412358Q"}
+{"IdAlmuno":0,"nombre":"Johnny","apellido":"Deep","dni":"58479632D"}
+{"IdAlmuno":1,"nombre":"","apellido":"","dni":""}
+{"IdAlmuno":2,"nombre":"","apellido":"","dni":""}
+{"IdAlmuno":3,"nombre":"Robert","apellido":"DeNiro","dni":"35478951V"}

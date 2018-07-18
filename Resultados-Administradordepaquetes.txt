@@ -1,0 +1,29 @@
+﻿
+
+Intentando recopilar información sobre la dependencia para el paquete 'MSTest.TestFramework.1.3.2' respecto al proyecto 'Common\FormularioServer.Common.Model', con el destino '.NETFramework,Version=v4.6.1'
+Resolviendo acciones para desinstalar el paquete 'MSTest.TestFramework.1.3.2'
+Se resolvieron las acciones para desinstalar el paquete 'MSTest.TestFramework.1.3.2'
+
+
+Intentando recopilar información sobre la dependencia para el paquete 'MSTest.TestFramework.1.3.2' respecto al proyecto 'Presentation\FormularioServer.Presentation.WinSite', con el destino '.NETFramework,Version=v4.6.1'
+Resolviendo acciones para desinstalar el paquete 'MSTest.TestFramework.1.3.2'
+Se resolvieron las acciones para desinstalar el paquete 'MSTest.TestFramework.1.3.2'
+
+
+Intentando recopilar información sobre la dependencia para el paquete 'MSTest.TestFramework.1.3.2' respecto al proyecto 'Infrastucture\FormularioServer.Infrastructure.Repository', con el destino '.NETFramework,Version=v4.6.1'
+Resolviendo acciones para desinstalar el paquete 'MSTest.TestFramework.1.3.2'
+Se resolvieron las acciones para desinstalar el paquete 'MSTest.TestFramework.1.3.2'
+El paquete 'MSTest.TestFramework.1.3.2' se quitó de 'packages.config'
+'MSTest.TestFramework.1.3.2' se desinstaló correctamente de FormularioServer.Common.Model
+La ejecución de acciones de NuGet tardó 563,96 ms
+El paquete 'MSTest.TestFramework.1.3.2' se quitó de 'packages.config'
+'MSTest.TestFramework.1.3.2' se desinstaló correctamente de FormularioServer.Presentation.WinSite
+La ejecución de acciones de NuGet tardó 893,42 ms
+El paquete 'MSTest.TestFramework.1.3.2' se quitó de 'packages.config'
+'MSTest.TestFramework.1.3.2' se desinstaló correctamente de FormularioServer.Infrastructure.Repository
+Quitando el paquete 'MSTest.TestFramework.1.3.2' de la carpeta 'C:\Users\jhoubbertM\source\repos\FormularioAlumnos\packages'
+El paquete 'MSTest.TestFramework.1.3.2' se quitó de la carpeta 'C:\Users\jhoubbertM\source\repos\FormularioAlumnos\packages'
+La ejecución de acciones de NuGet tardó 1,89 sec
+Tiempo transcurrido: 00:00:03.6702540
+========== Finalizado ==========
+

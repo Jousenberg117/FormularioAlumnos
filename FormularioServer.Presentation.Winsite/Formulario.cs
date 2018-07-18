@@ -32,9 +32,9 @@ namespace FormularioAlumnos
             jsonAlumno = repository.ParseJSON(textName.Text, textLastName.Text, textDNI.Text);
             try
             {
+
                 repository.add(jsonAlumno);
-               
-                log.Debug(jsonAlumno);
+                log.Debug(jsonAlumno.ToString());
             }
             catch (Exception ex)
             {
